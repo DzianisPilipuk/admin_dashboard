@@ -18,14 +18,15 @@ h2 {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: clamp(250px, 30%, 350px) 3fr;
     height: 100vh;
 }
 
 .sidebar {
-    background-color: rgb(62, 74, 175);
+    background-color: rgb(84, 167, 128);
     color: white;
     padding: 20px;
+    height: 100vh;
 }
 
 .sidebar img {
@@ -62,4 +63,67 @@ h2 {
 
 .logo-name-pair h2 {
     margin-left: 25px;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.header .pictogram{
+    width: 1.5rem;
+}
+
+.header > .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.header > .search-bar > .pictogram {
+    padding: 10px;
+}
+
+.header input {
+    border: none;
+    background-color: rgb(212, 226, 222);
+    height: 30px;
+    width: max(50px, 25vw);
+    border-radius: 15px;
+    appearance: none;
+    padding: 0px 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+
+.header input::-webkit-search-results-button {
+    -webkit-appearance: none;
+}
+
+.header input:focus {
+    outline: none;
+}
+
+.header > .profile-info {
+    width: clamp(200px, 25vw, 250px);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header > .profile-info > .profile-picture {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.header > .profile-info > .user-name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
 }
