@@ -1,6 +1,7 @@
 :root {
     --base-color: rgb(72, 163, 102);
     --additional-color: rgb(212, 226, 215);
+    --grey-color: rgb(85, 85, 85);
 }
 
 body {
@@ -203,6 +204,8 @@ h2 {
 
 .dashboard-content p {
     font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--grey-color);
 }
 
 .dashboard-content > .projects-board {
@@ -253,6 +256,7 @@ h2 {
 }
 
 .decorative-stripe-horizontal {
+    min-height: 2px;
     height: 2px;
     background-color: var(--base-color);
 }
@@ -260,10 +264,25 @@ h2 {
 .announcements-bar {
     background-color: white;
     border-radius: 10px;
-    align-self: stretch;
+    height: calc((100vh - 240px) / 2 - 40px);
     margin: 10px;
     padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
     -webkit-box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 3px 9px -1px rgba(0, 0, 0, 0.3);
+}
+
+.announcements-bar h3 {
+    font-size: 0.8rem;
+}
+
+.announcements-bar p {
+    margin: 5px 0px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--grey-color);
 }
